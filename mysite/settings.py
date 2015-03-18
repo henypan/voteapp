@@ -86,6 +86,12 @@ STATIC_URL = '/static/'
 
 # IMPORTANT!!! Add production settings at below:
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'polls/static', 'static_root')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'polls/static', 'static_dirs'),
+)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'polls/static', 'media')
+MEDIA_URL = '/media/'
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
 from django.conf import settings

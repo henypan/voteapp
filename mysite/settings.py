@@ -86,37 +86,26 @@ STATIC_URL = '/static/'
 
 # IMPORTANT!!! Add production settings at below:
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'polls/static', 'static_root')
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'polls/static', 'static_dirs'),
-)
-MEDIA_ROOT = os.path.join(BASE_DIR, 'polls/static', 'media')
-MEDIA_URL = '/media/'
-# Parse database configuration from $DATABASE_URL
-import dj_database_url
-from django.conf import settings
-
-DEBUG = False
-TEMPLATE_DEBUG = False
-
-DATABASES = settings.DATABASES
-DATABASES['default'] =  dj_database_url.config()
-
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-# Allow all host headers
-ALLOWED_HOSTS = ['*']
-
-SHARE_URL = ["https://whispering-river-3167.herokuapp.com/polls/"]
-# Static asset configuration
-# import os
-# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# STATIC_ROOT = 'staticfiles'
-# STATIC_URL = '/static/'
-
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'static_root')
 # STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
+#     os.path.join(BASE_DIR, 'static', 'static_dirs'),
 # )
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
+# MEDIA_URL = '/media/'
+# # Parse database configuration from $DATABASE_URL
+# import dj_database_url
+# from django.conf import settings
 
-# End of production settings
+# DEBUG = False
+# TEMPLATE_DEBUG = False
+
+# DATABASES = settings.DATABASES
+# DATABASES['default'] =  dj_database_url.config()
+
+# # Honor the 'X-Forwarded-Proto' header for request.is_secure()
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# # Allow all host headers
+# ALLOWED_HOSTS = ['*']
+
+# SHARE_URL = ["https://whispering-river-3167.herokuapp.com/polls/"]

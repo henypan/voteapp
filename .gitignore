@@ -1,0 +1,9 @@
+*.sqllite3
+*.sublime-project
+*.sublime-workspace
+
+__pycache__/
+*.py[cod]
+
+venv
+staticfiles

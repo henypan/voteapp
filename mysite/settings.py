@@ -109,3 +109,13 @@ STATIC_URL = '/static/'
 # ALLOWED_HOSTS = ['*']
 
 # SHARE_URL = ["https://whispering-river-3167.herokuapp.com/polls/"]
+
+# Static asset configuration
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)

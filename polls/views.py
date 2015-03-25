@@ -24,26 +24,9 @@ class ResultsView(generic.DetailView):
 
 def index(request):
 	latest_question_list = Question.objects.order_by('-pub_date')[:5]
-	# output = ' '.join([p.question_text for p in latest_question_list])
 	template = 'polls/index.html'
-	# context = RequestContext(request, {
-	# 		'latest_question_list':latest_question_list,
-	# 	})
 	context = {"latest_question_list":latest_question_list}
 	return render(request, 'polls/index.html', context)
-
-# def detail(request, question_id):
-# 	try: 
-# 		question = Question.objects.get(pk=question_id)
-# 		context = {"question" : question}
-# 	except:
-# 		raise Http404("Question doesn't exist")
-# 	return render(request, 'polls/detail.html', context)
-
-# def results(request, question_id):
-# 	# response = "You are looking at the result of question %s. "
-# 	question = get_object_or_404(Question, pk=question_id)
-# 	return render(request, 'polls/results.html', {'question' : question})
 
 def vote(request, question_id):
 	p = get_object_or_404(Question, pk=question_id)
